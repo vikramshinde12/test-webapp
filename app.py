@@ -8,11 +8,12 @@ from flask import render_template, request
 app = Flask(__name__)
 
 DELAY_TIMER = os.environ.get('APP_START_DELAY') or 0
+COLOR = os.environ.get('COLOR') or "#1649a0"
 
 
 @app.route('/')
 def main():
-    return render_template('hello.html', name=socket.gethostname(), color='#16a085')
+    return render_template('hello.html', name=socket.gethostname(), color=COLOR)
 
 
 if __name__ == '__main__':
