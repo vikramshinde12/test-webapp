@@ -17,6 +17,7 @@ AGE = os.environ.get('AGE') or 7
 def main():
     return render_template('hello.html', name=socket.gethostname(), color=COLOR, daughter_name=DAUGHTER_NAME, age=AGE)
 
+
 if __name__ == '__main__':
     print("Application Ready !!")
     app.run(host="0.0.0.0", port=8080)
